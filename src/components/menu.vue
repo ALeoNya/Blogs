@@ -68,7 +68,7 @@
     <div class="menuUser">
     <a href="#">
         <div>
-            <img src="" alt="">
+            <img src="../image/hiiro.jpg" alt="">
         </div>
         <h5 class="Username menuText">Kawayi</h5>
         <p class="menuText"><i class="iconfont icon-youjiantou"></i></p>

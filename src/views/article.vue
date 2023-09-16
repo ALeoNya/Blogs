@@ -1,6 +1,5 @@
 <!-- 文章展示页 -->
 <script setup lang="ts">
-import article from '@/components/show_article.vue';
 import { getContent } from '@/api/list'
 
 import { useRoute } from 'vue-router'
@@ -22,61 +21,75 @@ onBeforeMount(()=>{
 </script>
 
 <template>
-
-  <div class="background">
-    <Menu></Menu>
-    <div class="middle">
-      <div class="header"></div>
-        <!-- 发表的文章 -->
-      <div class="articleList">
-        <!-- <article></article> -->
-        <div class="preview">
-          <v-md-preview :text="content"></v-md-preview>
+<div class="background">
+  <Menu></Menu>
+  <div class="middle">
+    <!-- 发表的文章 -->
+    <div class="header"></div>
+    <div class="preview">
+      <v-md-preview :text="content"></v-md-preview>
+    </div>
+    <div class="tail">
+        <div>
+          <p>
+            <a href="https://ixk.me">Home</a> · 
+            <a href="https://github.com/syfxlin">GitHub</a> · 
+            <a href="https://status.ixk.me/">Status</a>
+          </p>
+          <p>© 2017-2023 Otstar Lin. All rights reserved</p>
+          <p>This page designed and built with by <a href="https://ixk.me">Otstar Lin</a> in 2022</p>
         </div>
-
-      </div>
-      <div class="tail"></div>
     </div>
   </div>
+</div>
+  
 </template>
 
 <style scoped>
 .background {
+  display: flex;
   width: 100%;
-  height: auto;
-  background-color: rgb(252, 160, 190);
+  min-height: 100%; 
+  max-height: auto;
+
+  background-attachment:fixed;
+  background-image: url('../image/yasuo.jpg');
 }
 .middle {
   width: 70%;
-  /* width: 960px; */
-  height: auto;
+  min-height: 100%;
+  max-height: auto;
+
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 25%;
+  margin-right: 25%;
   background-color: #f3f6f7;
 }
 .header {
-  height: 150px;
-  background-color: white;
-}
-.tail-pagination {
-  height: 40px;
-  background-color: white;
+  height: 250px;
+  background-color: #f3f6f7;
 }
 .tail {
-  height: 160px;
+  height: 108px;
   background-color: white;
-}
-.blogs-show-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
 
+  position: relative;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  padding: 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+}
 .preview {
-  height: 100%;
+  min-height: 550px;
+  max-height: auto;
   width: 100%;
+}
+p {
+  font-size: 12px;
 }
 </style>
