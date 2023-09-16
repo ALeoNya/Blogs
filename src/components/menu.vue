@@ -25,41 +25,41 @@
     <div class="actionsBar">
     <div>
         <button id="menuBtn" type="button"><i class="iconfont icon-hanbaocaidan"></i></button>
-        <h3 class="menuText">ALeo</h3>
+        <!-- <h3 class="menuText">ALeo</h3> -->
     </div>
     </div>
     <ul class="optionsBar">
     <li class="menuItem">
+        <!-- 返回首页 -->
         <a href="/nwcpnl" class="menuOption">
             <i class="iconfont icon-shouye"></i>
-            
         </a>
     </li>
     <li class="menuBreak">
         <hr>
     </li>
     <li class="menuItem">
+        <button itype="button" class="menuOption">
+            <i class="iconfont icon-twitter"></i>
+            <h5 class="menuText">推特</h5>
+        </button>
+    </li>
+    <li class="menuItem">
+        <button itype="button" class="menuOption">
+            <i class="iconfont icon-github"></i>
+            <h5 class="menuText">Github</h5>
+        </button>
+    </li>
+    <li class="menuItem">
+        <button itype="button" class="menuOption">
+            <i class="iconfont icon-telegram"></i>
+            <h5 class="menuText">Telegram</h5>
+        </button>
+    </li>
+    <li class="menuItem">
         <button type="button" class="menuOption">
-            <i class="iconfont icon-tupian"></i>
-            <h5 class="menuText">Photo album</h5>
-        </button>
-    </li>
-    <li class="menuItem">
-        <button itype="button" class="menuOption">
-            <i class="iconfont icon-tupian"></i>
-            <h5 class="menuText">QR code scanning</h5>
-        </button>
-    </li>
-    <li class="menuItem">
-        <button itype="button" class="menuOption">
-            <i class="iconfont icon-tupian"></i>
-            <h5 class="menuText">column</h5>
-        </button>
-    </li>
-    <li class="menuItem">
-        <button itype="button" class="menuOption">
-            <i class="iconfont icon-tupian"></i>
-            <h5 class="menuText">quit</h5>
+            <i class="iconfont icon-24gl-gear"></i>
+            <h5 class="menuText">管理</h5>
         </button>
     </li>
     </ul>
@@ -104,7 +104,8 @@ body {
     /* position: absolute; */
     width: 60px;
     height: 600px;
-    background-color: #302E80;
+    /* background-color: #302E80; */
+    background-color: wi;
     /* z-index: 2; */
     top: 0;
     bottom: 0;
@@ -232,13 +233,16 @@ body {
 
 .menu.open {
     /* width: 240px; */
-    background-color: #F19FA3;
+    /* background-color: #F19FA3; */
+    background-color: white;
     width: 200px;
 }
 
 .menuText.open2 {
     opacity: 1;
     transform: translateX(0);
+    margin-left: 0;
+    /* width: 200px; */
 }
 
 .menu .menuBreak {
@@ -370,4 +374,8 @@ body {
     color: #F19FA3;
 
 }
+/* h5 {
+    max-width: 50px;
+    margin-left: 1px;
+} */
 </style>

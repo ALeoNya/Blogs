@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7577298",
+      "name": "24gl-gear",
+      "font_class": "24gl-gear",
+      "unicode": "e9ba",
+      "unicode_decimal": 59834
+    },
+    {
+      "icon_id": "8474261",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e6b7",
+      "unicode_decimal": 59063
+    },
+    {
+      "icon_id": "11993477",
+      "name": "telegram",
+      "font_class": "telegram",
+      "unicode": "e794",
+      "unicode_decimal": 59284
+    },
+    {
+      "icon_id": "21096851",
+      "name": "twitter",
+      "font_class": "twitter",
+      "unicode": "ece3",
+      "unicode_decimal": 60643
+    },
+    {
       "icon_id": "1309",
       "name": "退出",
       "font_class": "tuichu",
