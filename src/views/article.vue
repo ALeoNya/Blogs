@@ -33,11 +33,11 @@ onBeforeMount(()=>{
         <div>
           <p>
             <a href="https://ixk.me">Home</a> · 
-            <a href="https://github.com/syfxlin">GitHub</a> · 
+            <a href="https://github.com/ALeoNya">GitHub</a> · 
             <a href="https://status.ixk.me/">Status</a>
           </p>
           <p>© 2017-2023 Otstar Lin. All rights reserved</p>
-          <p>This page designed and built with by <a href="https://ixk.me">Otstar Lin</a> in 2022</p>
+          <p>This page designed and built with by <a href="https://ixk.me">Aleo He</a> in 2022</p>
         </div>
     </div>
   </div>

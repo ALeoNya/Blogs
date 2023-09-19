@@ -8,7 +8,7 @@ export const getArticleTitle = function() {
 
 export const getContent  = function(cid:number) {
     return request({
-        url: '/getContentByid',
+        url: '/article/getContentByid',
         method: 'post',
         data: {
             cid,
