@@ -42,7 +42,7 @@ const props = defineProps<{
         tid: number; 
         title: string;
         digest: string;
-        date: string;
+        date: number;
     }
 }>();
 </script>
@@ -152,10 +152,4 @@ const props = defineProps<{
     line-height: 2;
     -webkit-line-clamp: 2;
 }
-
-/* .article {
-}
-.article:hover {
-  color: aqua;
-} */
 </style>

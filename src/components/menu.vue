@@ -4,8 +4,8 @@
 
 
     onMounted(()=> {
-        const menuBtn = document.getElementById('menuBtn')
-        const menu = document.querySelector('.menu')
+        const menuBtn:any = document.getElementById('menuBtn')
+        const menu:any = document.querySelector('.menu')
         const menuText = document.querySelectorAll('.menuText')
         menuBtn.addEventListener('click', () => {
             // console.log('hiiiii')
@@ -31,41 +31,89 @@
     <ul class="optionsBar">
     <li class="menuItem">
         <!-- 返回首页 -->
+        <el-tooltip
+        class="box-item"
+        effect="dark"
+        content="首页"
+        placement="right"
+        >
         <a href="/nwcpnl" class="menuOption">
             <i class="iconfont icon-shouye"></i>
         </a>
+        </el-tooltip>
     </li>
     <li class="menuBreak">
         <hr>
     </li>
     <li class="menuItem">
-        <button itype="button" class="menuOption">
+        <el-tooltip
+        class="box-item"
+        effect="dark"
+        content="Twitter"
+        placement="right"
+        >
+        <button itype="button" class="menuOption" onclick="window.open('https://twitter.com/ParifalH57168')">
             <i class="iconfont icon-twitter"></i>
             <h5 class="menuText">推特</h5>
         </button>
+        </el-tooltip>
     </li>
     <li class="menuItem">
-        <button itype="button" class="menuOption">
+        <el-tooltip
+        class="box-item"
+        effect="dark"
+        content="Github"
+        placement="right"
+        >
+        <button itype="button" class="menuOption" onclick="window.open('https://github.com/ALeoNya')" >
             <i class="iconfont icon-github"></i>
             <h5 class="menuText">Github</h5>
         </button>
+        </el-tooltip>
     </li>
     <li class="menuItem">
-        <button itype="button" class="menuOption">
+        <el-tooltip
+        class="box-item"
+        effect="dark"
+        content="Telegram"
+        placement="right"
+        >
+        <button itype="button" class="menuOption" onclick="window.open('https://web.telegram.org/k/')">
             <i class="iconfont icon-telegram"></i>
             <h5 class="menuText">Telegram</h5>
         </button>
+        </el-tooltip>
     </li>
     <li class="menuItem">
+        <el-tooltip
+        class="box-item"
+        effect="dark"
+        content="后台"
+        placement="right"
+        >
         <button type="button" class="menuOption">
             <i class="iconfont icon-24gl-gear"></i>
             <h5 class="menuText">管理</h5>
         </button>
+        </el-tooltip>
+    </li>
+    <li class="menuItem">
+        <el-tooltip
+        class="box-item"
+        effect="dark"
+        content="财务"
+        placement="right"
+        >
+        <button type="button" class="menuOption" onclick="window.open('https://web.telegram.org/k/')">
+            <i class="iconfont icon-jiaoyijilu"></i>
+            <h5 class="menuText">财管</h5>
+        </button>
+        </el-tooltip>
     </li>
     </ul>
-    <div class="about" id="about">
-    </div>
-    <div class="menuUser">
+    <!-- <div class="about" id="about">
+    </div> -->
+    <!-- <div class="menuUser">
     <a href="#">
         <div>
             <img src="../image/hiiro.jpg" alt="">
@@ -78,7 +126,7 @@
         <div>
             <button type="button"><i class="iconfont icon-tuichu"></i></button>
         </div>
-    </div>
+    </div> -->
 </nav>
 </template>
 
@@ -236,6 +284,7 @@ body {
     /* background-color: #F19FA3; */
     background-color: white;
     width: 200px;
+    height: 500px;
 }
 
 .menuText.open2 {

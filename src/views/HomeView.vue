@@ -1,10 +1,9 @@
 <!-- 首页 -->
 <script setup lang="ts">
-  import { ref , defineComponent ,onMounted } from 'vue'
+  import { ref , defineComponent ,onMounted,onBeforeMount } from 'vue'
   import Menu from '@/components/menu.vue'
   import { getArticleTitle } from '@/api/list'
   import articleList from '@/components/articleList.vue'
-import { ar } from 'element-plus/es/locale/index.mjs';
 
   let paginationProps = ref({
     // 每页显示的数据条数
@@ -15,19 +14,19 @@ import { ar } from 'element-plus/es/locale/index.mjs';
     total: 0,
   })
 
-  let data = ref([
-    {
-      tid: '',
-      title: '',
-      digest: '',
-      date: '',
-    }
-  ])
+  // let data = ref([
+  //   {
+  //     tid: '',
+  //     title: '',
+  //     digest: '',
+  //     date: '',
+  //   }
+  // ])
   interface currentPageData {  
-    tid: string,
-    title: String,
-    digest: String,
-    date: String,
+    tid: number,
+    title: string,
+    digest: string,
+    date: number,
   }  
   let currentPageData = ref<currentPageData[]>([])  
   const handlePagination = function (val:any) {
@@ -41,12 +40,13 @@ import { ar } from 'element-plus/es/locale/index.mjs';
   }
   
   interface Article {  
-    tid: string,
-    title: String,
-    digest: String,
-    date: String,
+    tid: number,
+    title: string,
+    digest: string,
+    date: number,
   }   
   let articles = ref<Article[]>([])  
+  // let articles = ref([])  
   const getArticleData = () => {
     getArticleTitle().then(res => {
       articles.value = res.data.data
@@ -55,7 +55,7 @@ import { ar } from 'element-plus/es/locale/index.mjs';
       handlePagination(1)
     })
   }
-  onMounted(async () => {
+  onBeforeMount(async () => {
     getArticleData()  //挂载完组件后执行异步获取数据
   })
 </script>
@@ -108,9 +108,12 @@ import { ar } from 'element-plus/es/locale/index.mjs';
       </div>
     </div>
   </div>
+
+
 </template>
 
 <style scoped>
+
 .background {
   width: 100%;
   height: auto;
