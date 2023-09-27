@@ -64,6 +64,9 @@
 
   <div class="background">
     <Menu></Menu>
+    <div class="front">
+      <articleList v-for="article in currentPageData" :key="article.tid" :article="article" />
+    </div>
     <div class="middle">
       <div class="header">
         <div class="header-img">
@@ -73,9 +76,6 @@
         <div class="name">
           <h1>ALeo he Nya~</h1>
         </div>
-        <!-- <div class="introduce">
-          <p></p>
-        </div> -->
       </div>
         <!-- 发表的文章 -->
         <div class="articleList">
@@ -193,5 +193,11 @@ h2 {
   font-family: "Comic Sans MS", "Comic Sans", cursive !important;
   color: rgb(134, 142, 150);
   margin: 120px;
+}
+
+.front {
+  background-color: white;
+  height: 100%;
+  width: 100%;
 }
 </style>
