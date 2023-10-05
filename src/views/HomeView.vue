@@ -14,14 +14,6 @@
     total: 0,
   })
 
-  // let data = ref([
-  //   {
-  //     tid: '',
-  //     title: '',
-  //     digest: '',
-  //     date: '',
-  //   }
-  // ])
   interface currentPageData {  
     tid: number,
     title: string,
@@ -35,8 +27,9 @@
     currentPageData.value = articles.value.slice(start, end)
     // console.log('currentPageData is')
     // console.log(currentPageData)
-    paginationProps.value.total = articles.value.length+1/7
-    // console.log(paginationProps.value.total)
+    // paginationProps.value.total = Math.ceil(articles.value.length+1/7)  //向上取整
+    paginationProps.value.total = articles.value.length
+    console.log(paginationProps.value.total)
   }
   
   interface Article {  
@@ -51,7 +44,7 @@
     getArticleTitle().then(res => {
       articles.value = res.data.data
       // console.log('articles is')
-      // console.log(articles)
+      console.log(articles)
       handlePagination(1)
     })
   }
@@ -86,6 +79,7 @@
         <div class="blogs-show-pagination">
           <el-pagination
             class="pagination"
+            :page-size="7"
             @size-change="handlePagination"  
             @current-change="handlePagination"
             v-model:current-page="paginationProps.currentPage"
